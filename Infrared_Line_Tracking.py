@@ -194,7 +194,7 @@ if __name__ == '__main__':
 	time.sleep(0.5)
 	for i in range(0,400):
 		TR.calibrate()
-		print i
+		print (i)
 	print(TR.calibratedMin)
 	print(TR.calibratedMax)
 	time.sleep(0.5)	
