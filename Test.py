@@ -1,12 +1,18 @@
-from picamera import PiCamera
+try:
+    from picamera import PiCamera
+except:
+    print("fail load camera")
 from gpiozero import Servo
 from time import sleep
 
 servoOne = Servo(22)
 servoTwo = Servo(27)
 
-servoOne.mid()
-servoTwo.mid()
+while True:
+    value = input()
+    print(value)
+    servoOne.value = value
+servoTwo.min()
 
 camera = PiCamera()
 camera.start_preview()
